@@ -1,0 +1,123 @@
+
+Usage: ./cy-meteo -f [file] [data types] [options]
+
+This code displays graphs on specific data from a source file.
+It sorts the data with an AVL if no sort is specified.
+
+Two arguments are mandatory:
+ - a file argument (-f) 
+ - at least one data type argument (-t, -p, -w, -m or -h)
+
+  -f				Argument to be placed before the file name.
+
+  -h				Outputs a graph of the altitude
+				for each station, sorted in descending order.
+				order.
+
+  -m				Outputs a graph of maximum humidity for each
+				for each station, sorted in descending order.
+				order.
+
+  -p1				Outputs a graph of minimum, maximum and average
+				and average pressure for each station,
+				in ascending order of station number.
+
+  -p2				Outputs a graph of average pressures by date/time
+				by date/time, sorted in chronological order.
+				chronological order. The average is done on all
+				stations.
+
+  -p3				Outputs a graph of pressures by date/time by station
+				by date/time by station, sorted in chronological order.
+				chronological order.
+
+  -t1				Outputs a graph of minimum, maximum and
+				temperature by station, in ascending order of station number.
+				by station, in ascending order of station number.
+				of the station number.
+
+  -t2				Outputs a graph of average temperatures by
+				average temperatures by date/time, sorted in chronological
+				in chronological order. The average is done
+				averaged over all stations.
+
+  -t3				Outputs a graph of the
+				temperatures per date/time per station.
+				They will be sorted in chronological order.
+
+  -w				Outputs a graph of the average wind direction
+				orientation and average wind speed
+				(average of the components). The data will be
+				sorted by ascending station ID.
+  
+
+
+
+It is possible to add other optional arguments:
+
+
+  -a				Argument to be placed before specifying a
+				a Argument to be placed before specifying a latitude interval for the search.
+				This option can be used independently of the
+				of the -g option. Ex: -a 15.90 -50.154
+
+  -d				Argument to be placed before specifying a date range
+				date range for the search. To be written
+				in the format YYYY-MM-DD
+				Ex: -d 2000-01-01 2000-12-31
+
+  -g				Argument to be placed before specifying a longitude
+				longitude interval for the search.
+				This option can be used independently of
+				of the -a option. Ex: -g 15.90 50.154
+
+  -A				Uses only data from the
+				Antilles.
+
+  -F				Uses only data from metropolitan France.
+				France.
+
+  -G				Uses only data from French Guiana.
+				French Guiana.
+
+  -O				Uses only data from the Indian Ocean.
+				Indian Ocean.
+
+  -Q				Uses only data from Antarctica.
+				Antarctica.
+
+  -S				Uses only data from
+				Saint-Pierre and Miquelon.
+
+  --abr				Sorted using an ABR structure.
+
+  --avl				Sort using an AVL structure.
+
+  --help				Display this help.
+
+  --tab				Sort using an array.
+
+
+
+
+
+Location arguments (capitalized) cannot be combined with each other.
+The latitude and longitude arguments (-a and -g) can be used independently of each other
+independently of each other. However, they cannot be combined with
+location arguments.
+
+
+Shell program output state :
+
+Exit status of the C program:
+
+0: The C program was executed correctly and the requested operations were performed successfully.
+
+1: Error on enabled options
+
+2: Error with input data file
+
+3: Error with output data file
+
+4: Internal runtime error
+

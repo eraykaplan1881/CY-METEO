@@ -1,0 +1,30 @@
+# Projet CY-METEO
+
+## Instruction to execute :
+
+Arrived in the directory of the code, please enter make then execute the shell script with the following command: ./exe followed by arguments.
+
+You can type any argument at any time.
+
+The date must be between 01/01/2000 and 31/12/2099
+
+latitudes must be between -90 and 90
+
+latitudes must be between -180 and 180
+
+## Known Issues :
+
+
+Sorting can only be done for the -m and -h arguments and only with an AVL. The same goes for graphics of course. We didn't manage to make graphics like those in the project statement.
+
+
+## Script:
+
+The shell script checks that everything is in order, that you have typed the required arguments correctly, that the arguments have been typed correctly and performs data filtering.
+The shell then calls the C program with the arguments we need for sorting the data.
+Then the shell takes over if everything went well with C and creates one or more PNGs containing a graphic.
+
+## Help :
+
+To know the different arguments available, just call the script with the argument
+--help
